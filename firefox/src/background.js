@@ -24,7 +24,7 @@ function isExempted() {
 function addContentScript(tabs) {
     console.log('filter urls ' + JSON.stringify(filteredUrls))
     currentUrl = new URL(tabs[0].url)
-    console.log('Current tab url' + currentUrl.hostname)
+    console.log('Current tab url ' + currentUrl.hostname)
     if (filteredUrls.includes(currentUrl.hostname) && !isExempted()) {
         console.log(`Loading content script into : ${currentUrl.hostname}`);
         browser.tabs.sendMessage(tabs[0].id, {
