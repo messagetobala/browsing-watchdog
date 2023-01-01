@@ -1,0 +1,41 @@
+{
+
+    "manifest_version": 3,
+    "name": "Browsing WatchDog",
+    "version": "1.0",
+  
+    "description": "Helps you to streamline your browsing habits.",
+  
+    "icons": {
+      "48": "icons/watchdog-48.png"
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"],
+        "css" : ["content-style.css"]
+      }
+    ],
+
+    "permissions": [
+      "webNavigation",
+      "tabs",
+      "storage"
+    ],
+
+    "background": {
+      "service_worker": "background.js"
+    },
+
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    },
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "broswing-watchdog-smkeynote@gmail.com"
+      }
+    }
+}

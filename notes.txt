@@ -1,0 +1,25 @@
+See https://stackoverflow.com/questions/70527776/getting-uncaught-in-promise-error-missing-host-permission-for-the-tab-in-ba
+on why you need <all_urls> permission
+
+
+Icon taken from https://fonts.google.com/icons using search term 'magnify'
+
+
+Problem with using onClick in html
+https://stackoverflow.com/questions/50405753/content-security-policy-issue-when-using-js-files-with-firefox-addon
+
+Problem with youtube.com
+https://stackoverflow.com/questions/27239280/chrome-webnavigation-oncomplete-not-working
+
+
+Firefox speciic:
+https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/
+
+
+https://support.mozilla.org/en-US/kb/find-and-install-add-ons-firefox-android
+
+Chrome specific:
+https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+
+
+https://stackoverflow.com/questions/14361061/extension-manifest-must-request-permission-to-access-this-host
