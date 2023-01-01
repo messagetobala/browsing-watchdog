@@ -1,10 +1,10 @@
-# Browsing WatchDog - A Firefox extension
+# Browsing WatchDog - A Browser extension
 
 This extension, helps you to streamline your browsing habits.  Do you feel like you are spending too much time browsing certain sites, instead of spending your time on more useful things? This extension would help you to kick out this habit.
 
 ## How this works?
 
-Once the extension is installed, go to "about:addons" to open the settings and click the Preferences button next to the extension's entry 
+Once the extension is installed, go to the options page of the extension.
 
 1. Add websites that you would like to spend less time on.
 
@@ -24,4 +24,21 @@ In the preferences section, you can also configure a time period during which yo
 ## Useful links
 - Installing the add-on from source
 
+  Firefox 
+
   Download the source code and follow the steps listed [here](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
+ 
+  Chrome
+  
+  Download the source code and follow the steps listed [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
+  
+- Accessing the options page of the extension
+
+  Firefox
+  
+  See [here](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+  
+  Chrome
+  
+  See [here](https://developer.chrome.com/docs/extensions/mv3/options/)
+  
