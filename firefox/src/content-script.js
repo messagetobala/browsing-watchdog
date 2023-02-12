@@ -1,4 +1,5 @@
 let SAVED_PROMPTS = 'saved_prompts'
+let FILTERED_URLS = 'filtered_urls'
 
 function modifyContent(prompts) {
     document.body.textContent = ""
@@ -75,7 +76,13 @@ function getHostname() {
     return new URL(window.location.href).hostname
 }
 
-browser.storage.sync.get(SAVED_PROMPTS).then(function(items) {
-        console.log(JSON.stringify(items))
-        modifyContent(items[SAVED_PROMPTS]);
+browser.storage.sync.get(FILTERED_URLS).then(function(items) {
+    if (items.hasOwnProperty(FILTERED_URLS) && 
+    items[FILTERED_URLS].includes(getHostname())) {
+        browser.storage.sync.get(SAVED_PROMPTS).then(function(items) {
+            console.log(JSON.stringify(items))
+            modifyContent(items[SAVED_PROMPTS])
+        })
+    }
 })
+

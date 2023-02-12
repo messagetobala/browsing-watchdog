@@ -1,8 +1,8 @@
 {
 
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Browsing WatchDog",
-  "version": "2.0",
+  "version": "3.0",
 
   "description": "Helps you to streamline your browsing habits.",
 
