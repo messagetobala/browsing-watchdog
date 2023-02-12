@@ -21,29 +21,19 @@ function isExempted() {
     return result;
 }
 
-function addContentScript(tabs) {
-    console.log('filter urls ' + JSON.stringify(filteredUrls))
-    currentUrl = new URL(tabs[0].url)
-    console.log('Current tab url ' + currentUrl.hostname)
+function getCurrentTabAndAddContentScript(requestDetails) {
+    console.log('Filtered urls ' + JSON.stringify(filteredUrls))
+    console.log('Current tab url ' + requestDetails.url)
+    currentUrl = new URL(requestDetails.url)
+    console.log('Current tab url' + currentUrl.hostname)
     if (filteredUrls.includes(currentUrl.hostname) && !isExempted()) {
         console.log(`Loading content script into : ${currentUrl.hostname}`);
-        browser.tabs.sendMessage(tabs[0].id, {
-            replacement: currentUrl.hostname,
-            prompts: prompts
-        })
+        browser.tabs.insertCSS({file: "content-style.css"});
+        browser.tabs.executeScript({file: "content-script.js"});
     } else {
         console.log('Current tab url not matched')
     }
-}
-
-function getCurrentTabAndAddContentScript(requestDetails) {
-    let querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(addContentScript);
-
-}
+  }
 
 function addListener(items) {
     browser.webNavigation.onCompleted.removeListener(getCurrentTabAndAddContentScript)
